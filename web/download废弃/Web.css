@@ -1,0 +1,118 @@
+.html {
+    margin: 0px 0px 0px 0px;
+}
+.body {
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    background-image: url(https://bing.rthe.net/wallpaper);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.h {
+    margin: 0.5% 0.5% 0.5% 0.5%;
+    border-style: dashed;
+    border-width: 0px 0px 2.8px 0px;
+    border-color: #a9d966;
+}
+.h1 {
+    margin: 0px 0px 0px 1.8%;
+    font-size: 40px;
+    color: #000000;
+    font-weight: 300;
+    font-family: 'Microsoft YaHei';
+}
+.ht {
+    margin: 0px 0px 0.5% 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+.ah {
+    text-decoration: none;
+}
+.a1 {
+    margin: 0px 0px 0px 0px;
+    font-size: 17px;
+    color: #000000;
+    font-weight: 400;
+    font-family: 'Microsoft YaHei';
+    text-decoration: none;
+}
+.l1 {
+    transition-duration: 160ms;
+    transition-timing-function:ease-in-out;
+    margin: 0px 6% 0px 0px;
+    border-radius: 5px;
+}
+.l1:hover{
+    background-color:rgba(0, 0, 0, 0.15);
+}
+.lbox {
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+}
+.t {
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    height: 100%;
+}
+.t1 {
+    border-radius: 10px;
+    margin: 0px 0.5% 0px 0.5%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
+    width: 18.24%;
+    height: 100%;
+    float: left;
+    overflow: auto;
+}
+.t2 {
+    margin: 0px 0px 0px 0px;
+    width: 80%;
+    height: 100%;
+    float: left;
+    border-width: 0px 0px 0px 2.5px;
+    border-style: solid;
+    border-color: #000000;
+    background-color: none;
+}
+.t2box {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /*Safari  ”¶*/
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
+    height: 100%;
+    margin: 0px 0px 0px 0.5%;
+    background-color: none;
+    transition-duration: 220ms;
+    transition-timing-function:ease-out;
+}
+    .t2box:hover {
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(00px); /*Safari  ”¶*/
+    }
+#op {
+    border-radius: 10px;
+    background-color: none;
+    width: 100%;
+    height: 100%;
+    margin: 0px 0px 0px 0px;
+}
+::-webkit-scrollbar {
+    width: 3px;
+    height: 100%;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.30);
+}
+::-webkit-scrollbar-button {
+    width: 100%;
+    height: 10px;
+}

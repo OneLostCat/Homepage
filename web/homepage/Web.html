@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="zh-cn" class="html">
+<head>
+    <meta charset="utf-8" />
+    <title>主页</title>
+    <script src="/file/jquery/jquery_min.js"></script>
+    <script type="text/javascript" src="Web.js"></script>
+    <style type="text/css">@import "Web.css";</style>
+    <script type="text/javascript">
+		$(document).ready(function () {
+			runJson(location.protocol + "//" + location.host + "/Bing/?format=js&idx=0&n=1&mkt=zh-CN", function (js) {//自动检测域名替换（开发时内网兼容需要）& 解析Bing壁纸api Json
+                //$("body").css("background-image", "url(https://cn.bing.com" + JSON.parse(js).images[0].url + ")");//转换成Json对象 + 设置背景
+				$(".img_c").attr("src", "https://cn.bing.com" + JSON.parse(js).images[0].url);//转换成Json对象 + 设置背景
+				$(".img_c").css("opacity", "1");//显示图像
+				//$(".image_c").css("opacity", "1");//显示图像
+			});
+		});
+
+    </script>   
+</head>
+<body id="img">
+    <img class="img_c"/>
+    <div id="web">
+        <div id="timebox">
+            <!--时间-->
+            <a id="al" href="/"><p id="time">00:00:00</p></a>
+        </div>
+        <div id="searchbox">
+            <!--搜索区-->
+            <input id="search" type="text" placeholder="此页面还未完成哦">
+        </div>
+        <div id="introduce">
+            <!--简介及网站-->
+        </div>
+    </div>
+</body>
+</html>

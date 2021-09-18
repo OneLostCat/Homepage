@@ -1,0 +1,45 @@
+{
+    "zh-cn" :{
+        "title":"GS归影（;￣O￣）- 杰哥不要啊~",
+        " ConsoleInfo":"\n%cWelcome to Guiying homepage！\n欢迎来到归影的主页！\n\n%c站长：归影\n%c页面制作：萌萌\n\n%c© 2020 Grass block Studio. All Rights Reserved.\n",
+
+        ".logo" : "GS归影",
+        ".MenuBtn1":"首页",
+        ".MenuBtn2":"作品",
+        ".MenuBtn3":"关于",
+        ".ShopBtn":"进入小卖铺",
+        " ShopBtnInfo":"由于商业性调整 小卖铺暂时下架",
+
+        ".h1Text":"剑归 | 无影",
+
+        ".Work1 .WorkName":"剑归无影的博客",
+        ".Work1 .WorkText":"一个博客",
+        ".Work2 .WorkName":"SuperToolkit",
+        ".Work2 .WorkText":"全不能电脑工具箱",
+        ".Work3 .WorkName":"xiao游戏(doge)",
+        ".Work3 .WorkText":"dark~",
+        ".Work4 .WorkName,.Work5 .WorkName,.Work6 .WorkName":"敬请期待",
+
+        ".jieshao2":"介绍2"
+    },
+    "en" : {
+        "title":"GS归影（;￣O￣）- en",
+        " ConsoleInfo":"\n%cWelcome to Guiying homepage！\n欢迎来到归影的主页！\n\n%c站长：归影\n%c页面制作：萌萌\n\n%c© 2020 Grass block Studio. All Rights Reserved.\n",
+
+        ".logo" : "GS归影",
+        ".MenuBtn1":"首页",
+        ".MenuBtn2":"作品",
+        ".MenuBtn3":"关于",
+        ".ShopBtn":"进入小卖铺",
+        " ShopBtnInfo":"For some business problems, the shop is currently closed.",
+
+        ".h1Text":"剑归 | 无影",
+
+        ".Work1_text":"jgwy's blog",
+        ".Work2_text":"SuperToolkit",
+        ".Work3_text,.Work4_text,.Work5_text,.Work6_text":"敬请期待",
+
+        ".jieshao2":"介绍2"
+        
+    }
+}
