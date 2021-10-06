@@ -4,20 +4,20 @@
 <head>
 	<meta charset="utf-8" />
 	<title>下载页咯</title>
-	<!--<style type="text/css" class="css_a">@import "Web.css";</style>-->
-	<link href="style.css" rel="stylesheet" type="text/css"/>
 	<script src="/src/jquery/jquery-3.6.0.min.js"></script>
 	<script src="/src/jquery/jquery.cookie-1.4.1.js"></script>
-	<script src="Script1 - 副本.js"></script>
+	<!--<style type="text/css" class="css_a">@import "Web.css";</style>-->
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+	<script src="main.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
 			//刷新网页位置
 			LayoutRefresh();
 
 			//解析并获取黄图(doge)
-			runJson(location.protocol + "//" + location.host + "/Bing?format=js&idx=0&n=1&mkt=zh-CN", function (js) {//自动检测域名替换（憨憨开发时内网需要）& 解析Bing壁纸api Json
+			runJson(location.protocol + "//" + location.host + "/web/download/api/BingWallpaper?format=js&idx=0&n=1&mkt=zh-CN", function (js) {	//自动检测域名替换（憨憨开发时内网需要）& 解析Bing壁纸api Json
 				var data = JSON.parse(js);
-				$("#image_c").attr("src", "https://cn.bing.com" + data.images[0].url);//转换成Json对象 + 设置黄图(dogePlus)
+				$("#image_c").attr("src", "https://ww.bing.com" + data.images[0].url);//转换成Json对象 + 设置黄图(dogePlus)
 				$("#image_c").css("opacity", "1");//显示黄图(dogePlusPro)
 
 				//设置黄图介绍(dogePlusProMax)
@@ -38,7 +38,7 @@
 			});
 
 			//获取黄片(dogePlusProMaxUltra)
-			runJson(location.protocol + "//" + location.host + "/web/download/Video", function (js) {
+			runJson(location.protocol + "//" + location.host + "/web/download/api/VideoList.php", function (js) {
 				FileList = JSON.parse(js);
 				var vl0 = $("#VideoList0");
 				var vl1 = $("#VideoList1");
