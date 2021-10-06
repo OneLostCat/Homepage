@@ -9,9 +9,9 @@
     <style type="text/css">@import "Web.css";</style>
     <script type="text/javascript">
 		$(document).ready(function () {
-			runJson(location.protocol + "//" + location.host + "/Bing/?format=js&idx=0&n=1&mkt=zh-CN", function (js) {//自动检测域名替换（开发时内网兼容需要）& 解析Bing壁纸api Json
+			runJson("/web/download/api/BingWallpaper?format=js&idx=0&n=1&mkt=zh-CN", function (js) {//自动检测域名替换（开发时内网兼容需要）& 解析Bing壁纸api Json
                 //$("body").css("background-image", "url(https://cn.bing.com" + JSON.parse(js).images[0].url + ")");//转换成Json对象 + 设置背景
-				$(".img_c").attr("src", "https://cn.bing.com" + JSON.parse(js).images[0].url);//转换成Json对象 + 设置背景
+				$(".img_c").attr("src", "https://www.bing.com" + JSON.parse(js).images[0].url);//转换成Json对象 + 设置背景
 				$(".img_c").css("opacity", "1");//显示图像
 				//$(".image_c").css("opacity", "1");//显示图像
 			});
