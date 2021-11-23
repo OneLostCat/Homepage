@@ -1,0 +1,50 @@
+{
+    "zh-cn" :{
+        "$name":"简体中文",
+        "title":"剑归无影 - 杰哥不要啊",
+        "$ConsoleInfo":"\n%c欢迎来到剑归无影的主页！\n\n%c站长：归影\n%c页面制作：萌萌\n\n%c© 2021 JGWY Studio. All Rights Reserved.\n",
+        
+        ".MenuLogo" : "剑归无影",
+        ".MenuBtn1":"首页",
+        ".MenuBtn2":"作品",
+        ".MenuBtn3":"关于",
+        ".ShopBtn":"进入小卖铺",
+        " ShopBtnInfo":"由于商业性调整 小卖铺暂时下架",
+        
+        ".h1Text":"剑归 | 无影",
+
+        ".Work1 .WorkName":"剑归无影的博客",
+        ".Work1 .WorkText":"一个博客",
+        ".Work2 .WorkName":"SuperToolkit",
+        ".Work2 .WorkText":"全不能电脑工具箱",
+        ".Work3 .WorkName":"xiao游戏(doge)",
+        ".Work3 .WorkText":"dark~",
+        ".Work4 .WorkName,.Work5 .WorkName,.Work6 .WorkName":"敬请期待",
+
+        ".jieshao2":"介绍2"
+    },
+    "en" : {
+        "$name":"English",
+        "title":"Jgwy - Homepage",
+        "$ConsoleInfo":"\n%cWelcome to Guiying homepage!\n\n%c站长：归影\n%c页面制作：萌萌\n\n%c© 2021 JGWY Studio. All Rights Reserved.\n",
+
+        ".MenuLogo" : "JGWY",
+        ".MenuBtn1":"Home",
+        ".MenuBtn2":"Product",
+        ".MenuBtn3":"About",
+        ".ShopBtn":"Enter our shop",
+        " ShopBtnInfo":"For some business problems, the shop is currently closed.",
+
+        ".h1Text":"剑归 | 无影",
+
+        ".Work1 .WorkName":"Jgwy's Blog",
+        ".Work1 .WorkText":"A Blog",
+        ".Work2 .WorkName":"SuperToolkit",
+        ".Work2 .WorkText":"The best computer toolkit in the world",
+        ".Work3 .WorkName":"xiao游戏(doge)",
+        ".Work3 .WorkText":"dark~",
+        ".Work4 .WorkName,.Work5 .WorkName,.Work6 .WorkName":"Please look forward it",
+
+        ".jieshao2":"Introduction2"
+    }
+}

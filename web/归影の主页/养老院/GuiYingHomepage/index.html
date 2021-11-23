@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="icon" href="files/image/OhThisGod.png" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="files/jQuery/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="mian.js"></script>
+
+	<!--Google Adsense Codes-->
+	<script data-ad-client="ca-pub-6256470146318186" async
+		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			runJson("files/language.json", function (json) {
+				lang = JSON.parse(json);
+				if (window.location.search != "") {
+					var value = GetSearchString('lang', window.location.search);
+					if (lang[value] != undefined) {
+						Opt["lang"] = value;
+					}
+				}
+				SetLanguage(Opt["lang"], lang);
+
+				LangNum = 0;
+				$(".Menu_lang").append("<p>"+ lang[Opt["lang"]]["$name"] +"</p>");
+				for(var key in lang){
+					if(key != Opt["lang"]){
+						$(".Menu_lang").append("<p onclick='window.location.href=\"?lang=" + key +"\"'>"+ lang[key]["$name"] +"</p>");
+					}
+					LangNum++;
+				}
+				console.log($(".Menu_lang p").height());
+				console.log(lang[Opt["lang"]]["$ConsoleInfo"], "color:rgb(89,137,229);font-size:12px;font-family:'Microsoft YaHei';", "color:rgb(0,0,0);font-size:12px;font-family:'Microsoft YaHei';", "color:rgb(157,210,90);font-size:12px;font-family:'Microsoft YaHei';", "color:rgb(0,0,0);font-size:11px;font-family:'Microsoft YaHei';");
+
+				LayoutRefresh();
+				fanYe();
+				//初始动画
+				$("#BackGround").css({
+					opacity: 1,
+					transform: "scale(1)",
+					filter: "blur(0px)"
+				});
+				$(".h1Text").css("opacity", 1);
+			});
+		});
+		$('.html').bind('contextmenu', function () { return false; });
+		$(window).resize(LayoutRefresh);
+	</script>
+</head>
+
+<body>
+	<div id="BackGround">
+		<video src="files/Video/Video01.mp4" class="bg" autoplay loop mute></video>
+		<div id="BackGroundMark"></div>
+	</div>
+	<!--<button class="fanHui" onclick='$("html,body").animate({scrollTop: "0px"}, 500);' onmouseover='$(this).addClass("xian")' onmouseout='$(this).removeClass("xian")'>返回</button>-->
+	<div id="MenuBox">
+		<div id="Menu1">
+			<p class="MenuLogo"></p>
+			<div class="Menu_lang"></div>
+			<div class="MenuBtnBox">
+				<button class="MenuBtn MenuBtn1" id="MenuBtn1"></button>
+				<button class="MenuBtn MenuBtn2" id="MenuBtn2"></button>
+				<button class="MenuBtn MenuBtn3" id="MenuBtn3"></button>
+			</div>
+			<!--<button class="ShopBtn"></button>-->
+		</div>
+		<div id="Menu2">
+			<p class="MenuLogo"></p>
+			<div class="Menu_lang"></div>
+			<div class="MenuBtnBox">
+				<button class="MenuBtn MenuBtn1"></button>
+				<button class="MenuBtn MenuBtn2"></button>
+				<button class="MenuBtn MenuBtn3"></button>
+			</div>
+		 	<!--<button class="ShopBtn"></button>-->
+		</div>
+	</div>
+	<div id="Page1">
+		<div class="h1">
+			<p class="h1Text"></p>
+		</div>
+	</div>
+	<div id="Page2">
+		<div id="WorkList">
+			<div class="Work Work1" onclick='window.open("https://blog.jgwy.top/")'>
+				<div class="WorkImage" style="background-image: url(files/image/WordPress2.png);transform: scale(0.8);">
+				</div>
+				<p class="WorkName"></p>
+				<div class="WorkTextBox">
+					<p class="WorkText"></p>
+				</div>
+			</div>
+			<div class="Work Work2">
+				<div class="WorkImage" style="background-image: url(files/image/SuperToolkitLoGo.png)"></div>
+				<p class="WorkName"></p>
+				<div class="WorkTextBox">
+					<p class="WorkText"></p>
+				</div>
+			</div>
+			<div class="Work Work3" onclick='window.open("https://game.jgwy.top/")'>
+				<div class="WorkImage" style="background-image: url(files/image/OhThisGod2.png)"></div>
+				<p class="WorkName"></p>
+				<div class="WorkTextBox">
+					<p class="WorkText"></p>
+				</div>
+			</div>
+			<div class="Work Work4">
+				<p class="WorkName ComingSoon"></p>
+			</div>
+			<div class="Work Work5">
+				<p class="WorkName ComingSoon"></p>
+			</div>
+			<div class="Work Work6">
+				<p class="WorkName ComingSoon"></p>
+			</div>
+		</div>
+	</div>
+	<div id="Page3">
+		<h1 class="jieshao2"></h1>
+	</div>
+	<script type="text/javascript">
+		$(window).scroll(function () {
+			var sol = $(window).scrollTop();
+			var sol_ = $(window).scrollTop() + $(window).height();
+			if (sol > 0 && !$("#Menu1").is(".shou")) {
+				$("#Menu1").addClass("shou");
+				clearTimeout(TimeOutRecord["Menu1"]);
+				TimeOutRecord["Menu1"] = setTimeout(function () {
+					$("#Menu1").css("overflow", "visible");
+				}, 400)
+			}
+			else if (sol <= 0 && $("#Menu1").is(".shou")) {
+				$("#Menu1").css("overflow", "");
+				$("#Menu1").removeClass("shou");
+				clearTimeout(TimeOutRecord["Menu1"]);
+			}
+
+			if (sol <= $("#Page1").height() * 0.6) {
+				MenuBtnSwitch("#MenuBtn1");
+				return;
+			}
+			if (sol_ >= $(document).height() - $("#Page1").height() * 0.6) {
+				MenuBtnSwitch("#MenuBtn3");
+				return;
+			}
+			if ($("#WorkList").height() <= 448) {
+				if (sol < $("#Page1").height() + $("#Page2").height() * 0.6 && sol_ > $("#Page1").height() + $("#Page2").height() * 0.4) {
+					MenuBtnSwitch("#MenuBtn2");
+					return;
+				}
+			}
+			else {
+				if (sol <= $("#Page1").height() + $("#WorkList").height() * 0.6 && sol_ >= $("#Page1").height() + $("#WorkList").height() * 0.4) {
+					MenuBtnSwitch("#MenuBtn2");
+					return;
+				}
+			}
+		});
+
+		$(".Work").hover(function () {
+			$(this).addClass("jieBoxhover");
+		}, function () {
+			$(this).removeClass("jieBoxhover");
+		});
+
+		//菜单
+		function MenuBtnHover(id, v) {
+			if (v) {
+				$(id).addClass("MenuBtn_hover");
+			}
+			else {
+				$(id).removeClass("MenuBtn_hover");
+			}
+		}
+		$(".MenuBtn1").hover(function (e) {
+			MenuBtnHover(".MenuBtn1", 1);
+		}, function () {
+			MenuBtnHover(".MenuBtn1", 0);
+		});
+		$(".MenuBtn2").hover(function (e) {
+			MenuBtnHover(".MenuBtn2", 1);
+		}, function () {
+			MenuBtnHover(".MenuBtn2", 0);
+		});
+		$(".MenuBtn3").hover(function (e) {
+			MenuBtnHover(".MenuBtn3", 1);
+		}, function () {
+			MenuBtnHover(".MenuBtn3", 0);
+		});
+
+		$(".MenuBtn1").click(function () {
+			$("html,body").animate({ scrollTop: "0px" }, 500);
+		});
+		$(".MenuBtn2").click(function () {
+			$("html,body").animate({ scrollTop: $("#Page1").height() }, 500);
+		});
+		$(".MenuBtn3").click(function () {
+			$("html,body").animate({ scrollTop: $(document).height() - $("#Page3").height() }, 500);
+		});
+
+		$(".ShopBtn").click(function () {
+			alert(lang[Opt["lang"]][" ShopBtnInfo"]);
+		});
+
+		$(".WorkName").hover(function () {
+			$(this).nextAll(".WorkTextBox").css("opacity", 1);
+			$(this).prevAll(".WorkImage").css("opacity", 0);
+		}, function () {
+			$(this).nextAll(".WorkTextBox").css("opacity", "");
+			$(this).prevAll(".WorkImage").css("opacity", "");
+		});
+
+		$(".Menu_lang").hover(function(){
+			$(this).css("height",LangNum * 22 + 1);
+		},function(){
+			$(this).css("height","");
+		});
+	</script>
+</body>
+
+</html>

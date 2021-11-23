@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn" class="html">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="/file/jquery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.html').bind('contextmenu', function () { return false; });
+            var urlParameter = window.location.search;
+            function getSearchString(key, Url) {
+                var str = Url;
+                str = str.substring(1, str.length);
+                var arr = str.split("&");
+                var obj = new Object();
+                for (var i = 0; i < arr.length; i++) {
+                    var tmp_arr = arr[i].split("=");
+                    obj[decodeURIComponent(tmp_arr[0])] = decodeURIComponent(tmp_arr[1]);
+                }
+                return obj[key];
+            }
+            var videoID = getSearchString('id', urlParameter);
+            var src, type;
+            switch (videoID) {
+                case "1":
+                    src = "/files/蔡徐坤.mp4";
+                    type = "video/mp4";
+                    break;
+                case "2":
+                    src = "/files/1.mp4";
+                    type = "video/mp4";
+                    break;
+                case "3":
+                    src = "/files/2.mp4";
+                    type = "video/mp4";
+                    break;
+                case "4":
+                    src = "/files/3.mp4";
+                    type = "video/mp4";
+                    break;
+                //------------------------------------------------
+                case "film01":
+                    src = "/files/阿拉丁.mp4";
+                    type = "video/mp4";
+                    break;
+                case "film02":
+                    src = "/files/误杀.mp4";
+                    type = "video/mp4";
+                    break;
+                case "film03":
+                    src = "/files/决战中途岛BD国英双语中英双字.mp4";
+                    type = "video/mp4";
+                    break;
+                case "film04":
+                    src = "/file/lldq/BDMV/STREAM/00003.mp4";
+                    type = "video/mp4";
+                    break;
+                case "film04_60f":
+                    src = "/files/流浪地球4k/60P.mp4";
+                    type = "video/mp4";
+                    break;
+            }
+            $("#media").attr("src", src);
+            $("#media").attr("type", type);
+            document.getElementById("mediabox").load();
+        });
+    </script>
+    <style type="text/css">
+        .html {
+            margin: 0px 0px 0px 0px;
+            background-color: none;
+        }
+        .body {
+            background-color: none;
+            margin: 0px 0px 0px 0px;
+        }
+        #mediabox {
+            background-color: none;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            max-height: 100%;
+            max-width: 100%;
+            margin: 0px 0px 0px 0px;
+        }
+        #media {
+            background-color: none;
+            margin: 0px 0px 0px 0px;
+        }
+    </style>
+
+</head>
+<body id="body">
+    <video controls height="100%" width="100%" id="mediabox">
+        <source src="" type="" id="media">
+        您的浏览器不支持
+    </video>
+</body>
+</html>

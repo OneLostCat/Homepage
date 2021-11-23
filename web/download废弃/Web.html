@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="zh-cn" class="html">
+<head>
+    <meta charset="utf-8" />
+    <title>下载页咯</title>
+    <script src="/file/jquery/jquery_min.js"></script>
+    <style type="text/css">
+        @import "Web.css";
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.html').bind('contextmenu', function () { return false; });
+            giao();
+            $(window).resize(giao);
+        });
+        function giao () {
+            var h = $(window).height();
+            $(".body").css("height", h - 82);
+        }
+    </script>
+</head>
+<body class="body">
+    <div class="h">
+        <a class="ah" href="/"><div class="ht"><p class="h1">下载页面</p></div></a>
+    </div>
+    <div class="t">
+        <div class="t1">
+            <ul>
+                <li class="l1"><div class="lbox"><a class="a1" href="VideoModule.html?id=1" target="in">鸡你太美</a></div></li>
+                <li class="l1"><div class="lbox"><a class="a1" href="VideoModule.html?id=2" target="in">音频可视化-</a><a class="a1" href="VideoModule.html?id=2" target="in" style="color:#0d6cad">Blue</a></div></li>
+                <li class="l1"><div class="lbox"><a class="a1" href="VideoModule.html?id=3" target="in">音频可视化-</a><a class="a1" href="VideoModule.html?id=3" target="in" style="color:#ff0000">Red</a></div></li>
+                <li class="l1"><div class="lbox"><a class="a1" href="VideoModule.html?id=4" target="in">音频可视化-</a><a class="a1" href="VideoModule.html?id=4" target="in" style="color:#69da28">Rreen</a></div></li>
+            </ul>
+            <ul>
+                <li class="l1"><div class="lbox"><a class="a1" href="VideoModule.html?id=film01" target="in">[电影]</a><a class="a1" href="VideoModule.html?id=film01" target="in" style="font-weight:600;">阿拉丁</a></div></li>
+                <li class="l1"><div class="lbox"><a class="a1" href="VideoModule.html?id=film02" target="in">[电影]</a><a class="a1" href="VideoModule.html?id=film02" target="in" style="font-weight:600;">误杀</a></div></li>
+                <li class="l1"><div class="lbox"><a class="a1" href="VideoModule.html?id=film03" target="in">[电影]</a><a class="a1" href="VideoModule.html?id=film03" target="in" style="font-weight:600;">决战中途岛</a></div></li>
+                <li class="l1"><div class="lbox"><a class="a1" href="VideoModule.html?id=film04" target="in">[电影]</a><a class="a1" href="VideoModule.html?id=film04" target="in" style="font-weight:600;">流浪地球 原碟</a></div></li>
+                <li class="l1"><div class="lbox"><a class="a1" href="VideoModule.html?id=film04_60f" target="in">[电影]</a><a class="a1" href="VideoModule.html?id=film04_60f" target="in" style="font-weight:600;">流浪地球 原碟 60fps</a></div></li>
+                <li class="li">鸡你太美</li>
+                <li class="li"></li>
+                
+            </ul>
+        </div>
+        <div class="t2">
+            <div class="t2box"><iframe frameborder="0" src="initial.html" name="in" id="op"></iframe></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BA2CBD08-4E6E-4D9B-8611-8004E6BBCB9C}"
+	ProjectSection(SolutionItems) = preProject
+		initial.html = initial.html
+		VideoModule.html = VideoModule.html
+		Web.css = Web.css
+		Web.html = Web.html
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C395532B-F97D-4617-B5E5-A93764178AFA}
+	EndGlobalSection
+EndGlobal

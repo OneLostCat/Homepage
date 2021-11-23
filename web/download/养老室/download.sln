@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{017BB237-D061-4F22-A1A5-9B5166DD84A0}"
+	ProjectSection(SolutionItems) = preProject
+		initial.html = initial.html
+		Script1 - 副本.js = Script1 - 副本.js
+		Script1.js = Script1.js
+		Video_Analysis.js = Video_Analysis.js
+		VideoModule.html = VideoModule.html
+		Web.css = Web.css
+		Web.html = Web.html
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1BF4C62-F944-4FF1-B105-3C13589E812B}
+	EndGlobalSection
+EndGlobal

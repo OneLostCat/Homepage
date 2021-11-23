@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn" class="html">
+<head>
+	<meta charset="utf-8" />
+	<script src="/file/jquery/jquery_min.js"></script>
+	<script type="text/javascript">
+		$('.html').bind('contextmenu', function () { return false; });
+	</script>
+	<style type="text/css">
+		* {
+			margin: 0px 0px 0px 0px;
+			box-sizing: border-box;
+			outline: none;
+		}
+
+		.html {
+			background-color: none;
+		}
+
+		#body {
+			background-color: none;
+			user-select: none;
+		}
+
+		#hP {
+			display: none;
+			z-index:10;
+			width: 100%;
+			position: absolute;
+			top: 1%;
+			opacity: 1;
+			background-color: none;
+			text-align: center;
+			font-weight: 600;
+			font-size: 12px;
+			margin: 0px 0px 0px 0px;
+			color: #ffffff;
+			font-family: 'Microsoft YaHei';
+			transition-duration: 300ms;
+			transition-timing-function: ease-in-out;
+		}
+
+		#mediabox {
+			display: none;
+			z-index: 5;
+			opacity: 0;
+			height: 100%;
+			width: 100%;
+			background-color: none;
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+			max-height: 100%;
+			max-width: 100%;
+			transition-duration: 300ms;
+			transition-timing-function: ease-in-out;
+		}
+
+		#media {
+			background-color: none;
+			margin: 0px 0px 0px 0px;
+		}
+
+		video::cue {
+			border-radius:10px;
+			background-color: rgba(0, 0, 0, 0.30);
+			color: white;
+			font-size: 65%;
+			font-family: 'Microsoft YaHei';
+			line-height: 0px;
+		}
+		video::cue(v[voice=aa]) {
+			color: green;
+		}
+
+		video::cue(v[voice=bb]) {
+			color: rgb(0, 26, 128);
+		}
+	</style>
+
+</head>
+<body id="body">
+	<p id="hP">此页面由萌萌制作</p>
+	<video controls controlslist="nodownload" id="mediabox">
+		<source id="media">
+		您的浏览器不支持
+	</video>
+</body>
+</html>
